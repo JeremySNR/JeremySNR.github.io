@@ -5,11 +5,21 @@ no local toolchain to install and nothing to break.
 
 Live at <https://jeremysnr.github.io>
 
+## Design
+
+Deliberately plain. No theme, no JavaScript, no webfonts, no external requests
+of any kind. Layouts are four small HTML files in `_layouts/` and the stylesheet
+is about 2KB of hand-written CSS. A page weighs roughly 10KB and renders as fast
+as the network can deliver it.
+
+Serif body text, classic blue and purple links, a horizontal rule for a header.
+It respects the reader's dark mode preference and does nothing else clever.
+
 ## Writing a new post
 
 Create a file in `_posts/` named `YYYY-MM-DD-some-slug.md`. The date in the
-filename is what orders the blog, so it has to be there and has to be in that
-format.
+filename orders the blog and sets the URL, so it has to be there and has to be
+in that format.
 
 ```markdown
 ---
@@ -18,8 +28,8 @@ title: "Your title here"
 date: 2026-08-03 09:00:00 +0100
 author: Jeremy Smith
 description: >-
-  One or two sentences. This is what shows up in Google results and when the
-  link is pasted into Slack or LinkedIn.
+  One or two sentences. Shows up in Google results, in the post list on the
+  homepage, and when the link is pasted into Slack or LinkedIn.
 tags: [ai, policy]
 ---
 
@@ -38,21 +48,22 @@ git commit -m "New post: your title"
 git push
 ```
 
-GitHub rebuilds the site automatically. It's usually live within a minute.
+GitHub rebuilds the site automatically. Usually live within a minute.
 
 ## Drafts
 
 Put unfinished posts in a `_drafts/` folder with no date in the filename. They
-are ignored by the build, so you can commit and push them safely without them
+are ignored by the build, so you can commit and push them without them
 appearing on the site.
 
 ## Structure
 
 | Path | What it does |
 | --- | --- |
-| `_config.yml` | Site title, description, theme, plugins |
+| `_config.yml` | Site title, tagline, plugins, permalink format |
 | `_posts/` | One Markdown file per published post |
-| `assets/main.scss` | Typography overrides on top of the minima theme |
+| `_layouts/` | `default`, `home`, `post`, `page`. Plain HTML |
+| `assets/style.css` | The entire stylesheet |
 | `about.md` | The About page |
 | `index.md` | Homepage, lists all posts automatically |
 | `404.html` | Shown for broken links |

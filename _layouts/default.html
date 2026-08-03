@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+{% seo title=false %}
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+
+<header>
+<a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+<p>{{ site.tagline }}</p>
+</header>
+
+<hr>
+
+<main>
+{{ content }}
+</main>
+
+<hr>
+
+<footer>
+<p><a href="{{ '/' | relative_url }}">home</a> &middot; <a href="{{ '/about/' | relative_url }}">about</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">rss</a></p>
+</footer>
+
+</body>
+</html>

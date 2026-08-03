@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{{ content }}
+
+<ul class="posts">
+{% for post in site.posts %}
+<li>
+<span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% if post.description %}<p>{{ post.description | strip_newlines | strip | truncate: 200 }}</p>{% endif %}
+</li>
+{% endfor %}
+</ul>

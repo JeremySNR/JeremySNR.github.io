@@ -1,0 +1,85 @@
+/* Plain CSS. No preprocessor, no webfonts, no JavaScript, no external requests. */
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font: 17px/1.6 Georgia, "Times New Roman", Times, serif;
+  color: #111;
+  background: #fff;
+  max-width: 38em;
+  margin: 0 auto;
+  padding: 1.5em 1em 3em;
+}
+
+a { color: #0000ee; }
+a:visited { color: #551a8b; }
+a:hover { text-decoration: none; }
+
+header a {
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #111;
+}
+header p {
+  margin: 0.2em 0 0;
+  font-size: 0.85em;
+  color: #555;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.2em 0;
+}
+
+h1 {
+  font-size: 1.6em;
+  line-height: 1.25;
+  margin: 0 0 0.2em;
+}
+h2 {
+  font-size: 1.2em;
+  margin: 2em 0 0.5em;
+}
+
+p, li { margin: 0 0 1em; }
+
+.meta {
+  font: 0.8em/1.4 ui-monospace, "Courier New", monospace;
+  color: #555;
+  margin-bottom: 2em;
+}
+
+ul.posts { list-style: none; padding: 0; }
+ul.posts li { margin-bottom: 1.5em; }
+ul.posts .date {
+  display: block;
+  font: 0.8em ui-monospace, "Courier New", monospace;
+  color: #555;
+}
+ul.posts p { margin: 0.3em 0 0; font-size: 0.9em; color: #333; }
+
+blockquote {
+  margin: 0 0 1em 1em;
+  padding-left: 1em;
+  border-left: 3px solid #ddd;
+}
+
+code, pre { font-family: ui-monospace, "Courier New", monospace; font-size: 0.9em; }
+pre { overflow-x: auto; }
+
+img { max-width: 100%; height: auto; }
+
+footer { font-size: 0.85em; color: #555; }
+
+@media (prefers-color-scheme: dark) {
+  body { background: #111; color: #ddd; }
+  a { color: #6cf; }
+  a:visited { color: #b9f; }
+  header a { color: #ddd; }
+  header p, .meta, footer, ul.posts .date { color: #999; }
+  ul.posts p { color: #bbb; }
+  hr { border-top-color: #333; }
+  blockquote { border-left-color: #444; }
+}
