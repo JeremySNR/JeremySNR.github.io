@@ -7,6 +7,7 @@ author: Jeremy Smith
 url: "https://jeremysnr.github.io"
 baseurl: ""
 lang: en_GB
+github_username: JeremySNR
 
 # Publish posts even if their timestamp is slightly ahead of GitHub's build
 # clock, which runs on UTC. Without this, a post written and pushed on the
