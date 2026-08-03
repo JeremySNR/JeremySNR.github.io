@@ -6,6 +6,12 @@ description: >-
 author: Jeremy Smith
 url: "https://jeremysnr.github.io"
 baseurl: ""
+lang: en_GB
+
+# Publish posts even if their timestamp is slightly ahead of GitHub's build
+# clock, which runs on UTC. Without this, a post written and pushed on the
+# same morning silently vanishes until the clock catches up.
+future: true
 
 # No theme. Layouts live in _layouts and the CSS is plain, hand-written and tiny.
 permalink: /:year/:month/:title/
