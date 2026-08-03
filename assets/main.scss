@@ -1,0 +1,52 @@
+---
+# Front matter must stay here (even empty) so Jekyll processes this file.
+---
+
+@import "minima";
+
+// Minima's defaults are a little cramped for long-form essays.
+// These overrides widen the measure slightly and improve readability.
+
+$content-width-custom: 46em;
+
+.wrapper {
+  max-width: $content-width-custom;
+}
+
+.post-content {
+  font-size: 19px;
+  line-height: 1.7;
+
+  p {
+    margin-bottom: 1.4em;
+  }
+
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    font-size: 27px;
+    line-height: 1.3;
+  }
+
+  blockquote {
+    font-style: normal;
+    letter-spacing: 0;
+    color: #555;
+  }
+}
+
+.post-title {
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+// The italic standfirst line directly under a post title.
+.post-content > p > em:first-child {
+  color: #666;
+}
+
+@media screen and (max-width: 600px) {
+  .post-content {
+    font-size: 17px;
+  }
+}

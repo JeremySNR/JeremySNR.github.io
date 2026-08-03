@@ -1,0 +1,41 @@
+title: Jeremy Smith
+tagline: Writing about AI, infrastructure and who ends up owning it
+description: >-
+  Essays on artificial intelligence, sovereign compute and the industrial
+  decisions Britain is making, or failing to make, right now.
+author: Jeremy Smith
+email: ""
+url: "https://jeremysnr.github.io"
+baseurl: ""
+
+theme: minima
+
+permalink: /:year/:month/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+minima:
+  date_format: "%-d %B %Y"
+
+header_pages:
+  - about.md
+
+# Social links appear in the footer. Delete any you do not want.
+# twitter_username: yourhandle
+# github_username: JeremySNR
+# linkedin_username: yourhandle
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .jekyll-cache
